@@ -1,0 +1,34 @@
+<div class="container">
+  <div class="row">
+      @for(product of products; track product.id) {
+          <div class="col-md-3">
+              <div class="card" style="width: 18rem; margin-bottom: 20px; position: relative;">
+                  @if(product.stock != 0){
+                      <button style="position: absolute; top: 0; left: 3%;top:2%; color: rgb(255, 255, 255); background-color: green; border-radius: 15px;border:none">In stock</button>
+                  }@else{
+                      <button style="position: absolute; top: 0; left: 3%;top:2%; color: rgb(255, 255, 255); background-color: rgb(185, 38, 38); border-radius: 15px;border:none">Out of stock</button>
+              
+                  }
+                  <a routerLink="card_details/{{product.id}}">
+                      <img [src]="product.thumbnail" class="card-img-top" style="width: 285px; height: 200px;" alt="...">
+                  </a>
+                  <div class="card-body">
+                      <div class="d-flex align-items-center justify-content-between">
+                          <h6 class="card-title">{{product.title}}</h6>
+                          <span>{{ product.price | currency:'USD':'symbol':'1.2-2' }}</span>
+                      </div>
+                      <h6>{{product.description}}</h6>
+                      <div class="star-rating">
+                          <span class="fa fa-star checked"></span>
+                          <span class="fa fa-star checked"></span>
+                          <span class="fa fa-star checked"></span>
+                          <span class="fa fa-star"></span>
+                          <span class="fa fa-star"></span>
+                      </div>                      
+                      <a class="btn btn-primary w-50 custom-rounded-btn" href="#" role="button">Add To Cart</a>
+                  </div>
+              </div>
+          </div>
+      }
+  </div>
+</div>

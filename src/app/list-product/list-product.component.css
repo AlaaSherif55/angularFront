@@ -1,0 +1,24 @@
+.custom-rounded-btn {
+    border-radius: 15px;
+    margin-top: 2px;
+  }
+  .star-rating {
+    font-size: 1.2rem; 
+  }
+  
+  .fa-star {
+    color: gold;
+  }
+  
+  .half-star::before {
+    content: '\f089'; 
+    color: gold;
+  }
+  
+  .empty-star::before {
+    content: '\f006'; 
+    color: #ccc; 
+  }
+  .checked {
+    color: orange;
+  }

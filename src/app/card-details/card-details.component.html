@@ -1,0 +1,52 @@
+ <div class="flex-box">
+        <div class="left">
+            <div class="big-img">
+                <img [src]="product.thumbnail">
+            </div>
+            <div class="images">
+                <div class="small-img">
+                    <img  [src]="product.images[0]" onclick="showImg(this.src)">
+                </div>
+                <div class="small-img">
+                    <img [src]="product.images[1]" onclick="showImg(this.src)">
+                </div>
+                <div class="small-img">
+                    <img [src]="product.images[2]" onclick="showImg(this.src)">
+                </div>
+                <div class="small-img">
+                    <img [src]="product.images[3]" onclick="showImg(this.src)">
+                </div>
+            </div>
+</div>
+
+<div class="right">
+    <div class="pname">{{product.title}}</div>
+    <div class="url">{{product.description}}</div>
+    <p>{{product.rating}}</p>
+    <div class="price">{{ product.price | currency:'USD':'symbol':'1.2-2' }}</div>
+    <div class="btn-box">
+     @if(product.stock!=0){
+      <button style="color:black;color:antiquewhite;background-color: green;border-radius: 15px;">In stock</button>
+     }@else{
+      <button style="color:black;color:antiquewhite;background-color: rgb(185, 38, 38);border-radius: 15px;">Out of stock</button>
+     }
+    </div>
+    <div class="btn-box">
+      <p>More information:</p>
+      <div class="quantity">
+        <button class="btn-box1" style="color: black; margin-left: 10px;border-radius: 15px;">Category</button>
+        <button class="btn-box1" style="color: black; margin-left: 10px;border-radius: 15px;">Brand</button>
+      </div>
+    </div>
+
+    <div class="quantity">
+      <p>Quantity :</p>
+      <input type="number" min="1" max="5" value="1">
+    </div>
+
+    <div class="btn-box">
+      <button class="cart-btn" (click)="addToCart()">Add to Cart</button>
+      <button class="buy-btn">Buy Now</button>
+    </div>
+  </div>
+</div>
