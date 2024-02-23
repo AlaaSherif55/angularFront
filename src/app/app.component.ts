@@ -7,13 +7,14 @@ import { BookCardComponent } from './book-card/book-card.component';
 import { BookComponent } from './book/book.component';
 import { AuthorComponent } from './author/author.component';
 import { AuthorCardComponent } from './author-card/author-card.component';
-import { CategoryComponent } from './category/category.component';
-import { CategoryCardComponent } from './category-card/category-card.component';
+import { CategoriesComponent } from './categories/categories.component';
+import { CategoryCardComponent } from './catergory-card/catergory-card.component';
+import { ShowCategoryBooksCardComponent } from './show-category-books-card/show-category-books-card.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet,HeaderComponent,ListProductComponent,CardDetailsComponent,BookCardComponent,BookComponent, AuthorComponent, AuthorCardComponent, CategoryComponent, CategoryCardComponent ],
+  imports: [RouterOutlet,HeaderComponent,ListProductComponent,CardDetailsComponent,BookCardComponent,BookComponent, AuthorComponent, AuthorCardComponent, CategoriesComponent, CategoryCardComponent, ShowCategoryBooksCardComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
