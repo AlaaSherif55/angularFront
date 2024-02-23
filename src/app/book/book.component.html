@@ -1,20 +1,41 @@
 <div class="container">
     <div class="row">
-       @for(book of books; track book.id) {
-            <div class="col-md-3">
-                <div class="card" style="width: 18rem; margin-bottom: 20px; position: relative;">
-                    <a>
-                        <img [src]="book.image" class="card-img-top" style="width: 285px; height: 200px;" alt="...">
-                    </a>
-                    <div class="card-body">
-                        <div class="d-flex align-items-center justify-content-between">
-                            <a routerLink="/books/{{book.id}}" class="card-title">{{book.title}}</a>
-                        </div>
-                        <a routerLink="/authors/{{book.author.id}}">{{book.author.firstName}} {{book.author.lastName}}</a>                  
-                    </div>
-                </div>
+      @for(book of books; track book.id) {
+      <div class="col-md-3">
+        <div class="card" style="width: 18rem; margin-bottom: 20px; position: relative;">
+          <a>
+            <img [src]="book.image" class="card-img-top" style="width: 285px; height: 200px;" alt="...">
+          </a>
+          <div class="card-body">
+            <div class="d-flex align-items-center justify-content-between">
+              <a routerLink="/books/{{book.id}}" class="card-title">{{book.title}}</a>
             </div>
-    }
+            <a routerLink="/authors/{{book.author.id}}">{{book.author.firstName}} {{book.author.lastName}}</a>
+          </div>
+        </div>
+      </div>
+      }
     </div>
+  </div>
+  
+  <div class="container text-center mt-3">
+    <nav aria-label="...">
+        <ul class="pagination justify-content-center">
+          <li class="page-item">
+            <a class="page-link"  (click)="navigateToPage(currentPage - 1)">Previous</a>
+          </li>
+          <li class="page-item"><a class="page-link"  (click)="navigateToPage(1)">1</a></li>
+          <li class="page-item" [class.active]="currentPage === 2">
+            <a class="page-link"  (click)="navigateToPage(2)">2 <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="page-item" [class.active]="currentPage === 3">
+            <a class="page-link"  (click)="navigateToPage(3)">3</a>
+          </li>
+          <li class="page-item">
+            <a class="page-link"  (click)="navigateToPage(currentPage + 1)">Next</a>
+          </li>
+        </ul>
+      </nav>
+      
   </div>
   

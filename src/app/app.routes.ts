@@ -4,10 +4,10 @@ import { BookComponent } from './book/book.component';
 import { BookCardComponent } from './book-card/book-card.component';
 import { AuthorComponent } from './author/author.component';
 import { AuthorCardComponent } from './author-card/author-card.component';
-import { CategoryComponent} from './category/category.component';
-import { CategoryCardComponent } from './category-card/category-card.component';
 import { CardDetailsComponent } from './card-details/card-details.component';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { CategoriesComponent } from './categories/categories.component';
+import { ShowCategoryBooksCardComponent } from './show-category-books-card/show-category-books-card.component';
 
 export const routes: Routes = [
     {
@@ -17,12 +17,12 @@ export const routes: Routes = [
     },
     {
         path:"categories",
-        component:CategoryComponent,
+        component:CategoriesComponent,
         title:"Categories"
     },
     {
         path:"categories/:id",
-        component:CategoryCardComponent,
+        component:ShowCategoryBooksCardComponent,
         title:"Categories"
     },
     {

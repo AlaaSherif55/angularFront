@@ -1,0 +1,12 @@
+
+<div class="category-card">
+  <div class="category-card-header">
+    <a routerLink="/categories/{{categoryItem._id}}">
+      <img [src]="categoryItem.image" alt="Category Image" class="category-card-img" >
+    </a>
+  </div>
+  <div class="category-card-body">
+    <h5 class="category-name" >{{ categoryItem.name }}</h5>
+    <button class="btn btn1" (click)="redirectToDetails(categoryItem.id)"> View details</button>
+  </div>
+</div>
