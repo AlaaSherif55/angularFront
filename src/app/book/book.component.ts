@@ -1,10 +1,12 @@
 import { Component } from '@angular/core';
 import { Book } from '../interface/book';
 import { BookService } from '../services/book.service';
+import { FormsModule } from '@angular/forms';
+import { RouterLink, RouterLinkActive } from '@angular/router';
 @Component({
   selector: 'app-book',
   standalone: true,
-  imports: [],
+  imports: [FormsModule,RouterLink,RouterLinkActive],
   templateUrl: './book.component.html',
   styleUrl: './book.component.css'
 })

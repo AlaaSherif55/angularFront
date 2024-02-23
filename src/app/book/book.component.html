@@ -8,14 +8,13 @@
                     </a>
                     <div class="card-body">
                         <div class="d-flex align-items-center justify-content-between">
-                            <h6 class="card-title"></h6>
+                            <a routerLink="/books/{{book.id}}" class="card-title">{{book.title}}</a>
                         </div>
-                        <h6>555555</h6>                  
+                        <a routerLink="/authors/{{book.author.id}}">{{book.author.firstName}} {{book.author.lastName}}</a>                  
                     </div>
                 </div>
             </div>
-            
-       }
+    }
     </div>
   </div>
   
